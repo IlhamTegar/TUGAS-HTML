@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #3d3c3c;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    section {
+        width: 100%;
+        height: 95vh;
+        background-color: #2b2a2a;
+        background-size: cover;
+        position: relative;
+        
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        background-color: #121312;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        padding: 0px 5%;
+        letter-spacing: 3px;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: 1000;
+    }
+    
+    nav ul {
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav ul a {
+        margin: 30px;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        color: #bcbdb5;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    li{
+    list-style-type: none;
+    padding: 20px;
+    margin: 5px;
+    color: white;
+    }
+
+    li:hover {
+    background-color: rgba(255, 0, 0, 0.603);
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+    }
+
+    .logo {
+        font-family: Verdana, Tahoma, sans-serif;
+        color: #ff0000;
+        font-size: 22px;
+    }
+    .active {
+        font-weight: bold;
+        color: #3b2929;
+    }
+    .text-container p:nth-child(1) {
+        font-family: Calibri;
+        font-weight: bold;
+        color: #ee0b0b;
+        font-size: 22px;
+    }
+    
+    .text-container p:nth-child(2) {
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #f0e6e6;
+        font-size: 60px;
+        letter-spacing: 1px;
+    }
+    
+    .text-container p:nth-child(3) {
+        font-family: Calibri;
+        font-weight: bold;
+        color: #403e3e;
+        margin-top: auto;
+        font-size: 30px;
+        letter-spacing: 5px;
+        line-height: 30px;
+    }
+    
+    .text-container p {
+        line-height: 0px;
+        margin: 45px 0px 25px;
+    }
+    
+    .text-container {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+    }
+    .about-container {
+        width: 80%;
+        height: 330px;
+        background-color: #a19e9e;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        margin: 2% auto 20px auto;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .about-container2 {
+        width: 80%;
+        height: 330px;
+        background-color: #a09d9d;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        margin: 2% auto 20px auto;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    
+    .about-container img {
+        height: 250px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        padding: 20px;
+        border-left: 4px solid black;
+        border-bottom: 4px solid black;
+    }
+    
+    .about-text {
+        width: 550px;
+    }
+    
+    .about-text p:nth-child(1) {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 0px;
+    }
+    
+    .about-text p:nth-child(2) {
+        color: #ffffff;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 5px;
+    }
+    
+    .about-text p:nth-child(3),
+    .about-text p:nth-child(4) {
+        color: #ffffff;
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .cv-btn {
+        width: 100px;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: #030404;
+        cursor: pointer;
+        background-color: #524b4b;
+
+        
+    }
+    
+    button:active {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+
+    .services {
+        height: 600px;
+        background-color: #f81b1b;
+        padding: 2% 10% 0 10%;
+    }
+    
+    .services-text p:nth-child(1) {
+        font-family: Calibri;
+        font-weight: bold;
+        color: #ebe2e2;
+        font-size: 30px;
+        line-height: 0
+    }
+    
+    .services-text p:nth-child(2) {
+        font-family: Calibri;
+        font-weight: bold;
+        color: #ebe2e2;
+        font-size: 15px;
+        line-height: 5px;
+    }
+    
+    .services-text p:nth-child(3) {
+        font-family: Calibri;
+        color: #7e7d7d;
+    }
+    
+    .services-text {
+        margin: 50px 0px;
+        text-align: center;
+    }
+    
+    .box-1,
+    .box-2,
+    .box-3 {
+        border-radius: 5px;
+        width: 400px;
+        height: 320px;
+        background-color: rgb(29, 28, 28);
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 5px;
+    }
+    
+    .box-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .box-1 {
+        background-image: url("gambar/html.png");
+        background-size: contain;
+    }
+    
+    .box-2 {
+        background-image: url("gambar/css.jpg");
+        background-size: cover; 
+    }
+    
+    .box-3 {
+        background-image: url("gambar/python.jpg");
+        background-size: cover
+    }
+    
+    .box-1 span,
+    .box-2 span,
+    .box-3 span {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color:#f81b1b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: calibri;
+        font-weight: bold;
+    }
+    
+    .box-1 p:nth-child(2),
+    .box-2 p:nth-child(2),
+    .box-3 p:nth-child(2) {
+        color: #8f8c8c;
+        font-family: calibri;
+        font-size: 23px;
+        line-height: 0px;
+    }
+
+    .box-1 button,
+    .box-2 button,
+    .box-3 button {
+        width: 100px;
+        height: 30px;
+        background-color: #5f5f61;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+            
+    footer {
+        background-color: #000000;
+        text-align: center;
+        color: #f81b1b;
+        padding: 10px;
+    }         
+</style>
+<body>
+    <section>
+        <nav>
+            <a href="#beranda"  class="logo">PORTOFOLIO</a>
+            <ul>
+                <li><a href="#data" id="About" >Personal Data</a></li>
+                <li><a href="#about" id="About" >About</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </section>
+     <div class="text-container">
+            <p>Hello,</p>
+            <p>SAYA ILHAM TEGAR PRATAMA</p>
+            <p><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+        </div>
+        <div id="data" class="about-container">
+            <img src="foto.jpeg" alt="" class="model2">
+            <div class="about-text">
+                <p>Personal Data</p>
+                <P>Identitas</P>
+                <p> 
+                    Name            : Ilham Tegar Pratama <br>
+                    Jenis kelamin   : Laki laki  <br>
+                    Tempat Tingal   : Tegal, Jawa Tengah <br>
+                    Kode Pos        : 52464 <br>
+                    No. Telp        : (+62) 877-4993-3085 <br>
+                </p>
+            </div>
+        </div>
+        
+        <div id="about" class="about-container2">
+            <div class="about-text">
+                <p>About Me</p>
+                <P>programmer</P>
+                <p> 
+                    Hello, perkenalkan saya Ilham Tegar Pratama. Seorang programmer. Saya masih belajar dalam bidang ini. Tetapi jika ingin berbincang mengenai pekerjaan bisa kontak saya dengan nomor telepon saya diatas.
+                </p>
+                <p>
+                    Sebuah kata kata dari saya "apabila kamu suka bermimpi dan tidak ada perubahan, mungkin kamu masih tertidur".
+                </p>
+            </div>
+        </div>
+
+        <div id="resume" class="services">
+            <div class="services-text">
+                <p>Resume and Experience</p>
+                <p>Jika anda memiliki sebuah projek dan butuh bantuan ataupun butuh saran dari saya, silahkan klik yang dibawah ini</p>
+                <button class="cv-btn" >Download CV</button>
+            </div>
+            
+            <div class="services-text">
+                <p>Work Samples</p>
+                <p></p>
+            </div>
+         
+    
+            <div class="box-container">
+                <div class="box-1">
+                    <span>1</span>
+                    <p>HTML</p>
+                    <button>selengkapnya</button>
+                </div>
+                <div class="box-2">
+                    <span>2</span>
+                    <p>Java</p> <button>selengkapnya</button>
+                </div>
+                <div class="box-3">
+                    <span>3</span>
+                    <p>Python</p> <button>selengkapnya</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 ILHAM TEGAR PRATAMA</p>
+        </footer>
+    
+</body>
+</html>
