@@ -58,7 +58,7 @@ li{
 list-style-type: none;
 padding: 8px;
 margin: 3px;
-color: white;
+color: rgba(255, 255, 255, 0);
 }
 
 li:hover {
@@ -94,7 +94,7 @@ border-radius: 8px;
 .text-container p:nth-child(3) {
     font-family: Calibri;
     font-weight: bold;
-    color: #403e3e;
+    color: #726b6b;
     margin-top: auto;
     font-size: 30px;
     letter-spacing: 5px;
@@ -111,8 +111,40 @@ border-radius: 8px;
     left: 10%;
     top: 10%;
 }
+
+.scroll-down-arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-down-arrow span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 6px auto;
+    background-color: transparent;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 .about-container {
-    width: 80%;
+    width: 70%;
     height: 330px;
     background-color: #a19e9e;
     border-radius: 20px;

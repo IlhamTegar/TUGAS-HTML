@@ -1,0 +1,35 @@
+*,
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.rangkuman{
+    background-color: #000;
+}
+.pra h1, p{
+    color: white;
+    width: 100%;
+    padding: 5px 0px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    padding: 20px 30px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
