@@ -1,21 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Menangkap elemen tanda panah
-    var scrollArrow = document.querySelector('.scroll-down-arrow');
+function scrollToNextSection() {
+    // Menentukan elemen berikutnya yang akan dituju
+    var currentSection = document.querySelector('.content:target');
+    var nextSection = currentSection.nextElementSibling;
 
-    // Menambahkan event listener untuk melakukan scroll ke bawah saat tanda panah diklik
-    scrollArrow.addEventListener('click', function () {
-        window.scrollBy({
-            top: window.innerHeight,
-            behavior: 'smooth'
-        });
+    // Memeriksa apakah ada elemen berikutnya
+    if (nextSection) {
+        // Mengganti tautan hash untuk mengarahkan ke elemen berikutnya
+        location.hash = nextSection.id;
+
+        // Menyembunyikan semua div yang berjumlah 3 dan footer
+        hideDivsAndFooter();
+    }
+}
+
+function hideDivsAndFooter() {
+    // Mendapatkan semua elemen div yang berjumlah 3
+    var divsToHide = document.querySelectorAll('.content:nth-child(3n)');
+
+    // Mendapatkan elemen footer
+    var footerToHide = document.querySelector('footer');
+
+    // Menyembunyikan semua div yang berjumlah 3
+    divsToHide.forEach(function(div) {
+        div.style.display = 'none';
     });
 
-    // Menampilkan atau menyembunyikan tanda panah berdasarkan posisi scroll
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            scrollArrow.style.opacity = '0';
-        } else {
-            scrollArrow.style.opacity = '1';
-        }
-    });
-});
+    // Menyembunyikan footer
+    if (footerToHide) {
+        footerToHide.style.display = 'none';
+    }
+}
