@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="D:\TUGAS Sem.3\3.1 PEMROGRAMAN WEB\TUGAS HTML\Tugas3\style.css">
-    <title>Document</title>
-</head>
-<body>
-    <section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Stylesheet" href="./style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <section>
         <nav>
             <a href="Tugas3.html"  class="logo">PORTOFOLIO</a>
             <ul>
@@ -16,12 +16,21 @@
                 <li><a href="#resume">Content</a></li>
             </ul>
         </nav>
-    </section>
-     <div class="text-container">
+        </section>
+        <div class="text-container">
             <p>こんにちはようこそ,</p>
             <p>SAYA ILHAM TEGAR PRATAMA</p>
             <p><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+
+            <div class="scroll-down-arrow" onclick="scrollToNextSection()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
         </div>
+
+        
         <div id="data" class="about-container">
             <img src="foto.jpeg" alt="" class="model2">
             <div class="about-text">
@@ -37,6 +46,7 @@
             </div>
         </div>
         
+        
         <div id="about" class="about-container2">
             <div class="about-text">
                 <p>About Me</p>
@@ -48,12 +58,6 @@
                     Sebuah kata kata dari saya "apabila kamu suka bermimpi dan tidak ada perubahan, mungkin kamu masih tertidur".
                 </p>
             </div>
-        </div>
-
-        <div class="scroll-down-arrow" onclick="scrollToNextSection()">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
     
         <div id="resume" class="services">
@@ -88,7 +92,8 @@
         <footer>
             <p>&copy; 2023 Created and Developed by ILHAM TEGAR PRATAMA</p>
         </footer>
-    
+
         <script src="script.js"></script>
-</body>
+        
+    </body>
 </html>
