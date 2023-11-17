@@ -5,4 +5,5 @@ function scrollToNextSection() {
     if (nextSection) {
         nextSection.scrollIntoView({ behavior: 'smooth' });
     }
+    
 }
